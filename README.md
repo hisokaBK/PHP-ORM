@@ -1,4 +1,4 @@
-# 🚀 Custom PHP ORM - MVC CRUD Application with Docker & PostgreSQL
+# 🐘 Custom PHP ORM - MVC CRUD Application with Docker & PostgreSQL
 
 A simple MVC-based CRUD application built with PHP, PostgreSQL, and Docker.  
 This project demonstrates how to build a custom lightweight ORM and manage a full Dockerized development environment.
