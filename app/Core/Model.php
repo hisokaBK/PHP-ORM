@@ -24,7 +24,7 @@
     public static function jibKolchi() : array 
     {
             try {
-                $query = sprintf("SELECT * FROM %s" , static::$table);
+                $query = sprintf("SELECT * FROM %s " , static::$table);
                 $sm = static::db()->prepare($query);
                 $sm->execute();
 
@@ -47,7 +47,7 @@
          }
     }
 
-    public static function jibWa7d($primary) : ?self
+    public static function jibWa7d($primary) : ?self //4adi ndibagi b static
     {
           try{
             $query = "SELECT * FROM " . static::$table . " WHERE " . static::$primaryKey . " = :primary LIMIT 1";
@@ -77,7 +77,7 @@
             $columns=array_keys($properties);
             $columns=array_filter($columns , fn($col)=>$col !== $primaryKey);
 
-        // INSER--------------------------------------
+        // INSERT--------------------------------------
 
             if(empty($this->$primaryKey)){
 
@@ -132,7 +132,7 @@
              return $sm->execute();
 
         } catch (\PDOException $e) {
-           die("Database Error (save): " . $e->getMessage());
+           die("Database Error (dakhal): " . $e->getMessage());
         }
        
     }
@@ -155,7 +155,7 @@
             ]);
     
         } catch (\PDOException $e) {
-            die("Database Error (delete): " . $e->getMessage());
+            die("Database Error (msa7): " . $e->getMessage());
         } catch (\Exception $e) {
             die("Delete Error: " . $e->getMessage());
         }
